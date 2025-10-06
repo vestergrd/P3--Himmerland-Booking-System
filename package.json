@@ -1,0 +1,26 @@
+{
+  "name": "himmerland-booking-system",
+  "version": "1.0.0",
+  "description": "Third semester group project for AAU",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install && cd frontend && npm install && cd ../backend && gradlew.bat build",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "node run-backend.js",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "test:frontend": "cd frontend && npm run test",
+    "test:backend": "cd backend && gradlew.bat test",
+    "test": "concurrently \"npm run test:frontend\" \"npm run test:backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "himmerland-booking-system": "file:",
+    "react-icons": "^5.3.0"
+  }
+}
